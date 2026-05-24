@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Em Memória de Davi de Lima Araujo</title>
+  <meta name="description" content="Uma homenagem a Davi de Lima Araujo, 28/04/2002 – 23/05/2026." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream: #FAF8F4;
+      --cream2: #F2EFE8;
+      --border: rgba(0,0,0,0.1);
+      --border2: rgba(0,0,0,0.18);
+      --text: #1a1916;
+      --text2: #5a5850;
+      --text3: #9a9588;
+      --gold: #C4A35A;
+      --gold2: #E8C97A;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --cream: #14120E;
+        --cream2: #1E1B15;
+        --border: rgba(255,255,255,0.08);
+        --border2: rgba(255,255,255,0.15);
+        --text: #F0EDE6;
+        --text2: #A8A498;
+        --text3: #6a6560;
+        --gold: #C4A35A;
+        --gold2: #8a7040;
+      }
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--cream);
+      color: var(--text);
+      font-family: 'Jost', sans-serif;
+      font-weight: 300;
+      min-height: 100vh;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem;
+      background: var(--cream);
+      border-bottom: 0.5px solid var(--border);
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    nav a {
+      color: var(--text3);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    nav a:hover { color: var(--text); }
+
+    /* ── HERO ── */
+    #inicio {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 7rem 2rem 4rem;
+      border-bottom: 0.5px solid var(--border);
+    }
+
+    .candles {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .candle { display: flex; flex-direction: column; align-items: center; }
+
+    .flame {
+      width: 10px;
+      height: 18px;
+      background: var(--gold2);
+      border-radius: 50% 50% 20% 20%;
+      animation: flicker 2s ease-in-out infinite alternate;
+      position: relative;
+    }
+
+    .flame::after {
+      content: '';
+      position: absolute;
+      bottom: 2px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 5px;
+      height: 10px;
+      background: #FFF8DC;
+      border-radius: 50% 50% 20% 20%;
+    }
+
+    .candle:nth-child(2) .flame { animation-delay: 0.5s; animation-duration: 1.6s; }
+    .candle:nth-child(3) .flame { animation-delay: 1.1s; animation-duration: 2.2s; }
+
+    @keyframes flicker {
+      0%   { transform: scaleX(1)    scaleY(1)    translateX(0);     opacity: 1; }
+      25%  { transform: scaleX(0.88) scaleY(1.07) translateX(0.6px); opacity: 0.93; }
+      50%  { transform: scaleX(1.06) scaleY(0.94) translateX(-0.5px); opacity: 1; }
+      75%  { transform: scaleX(0.94) scaleY(1.1)  translateX(0.4px); opacity: 0.9; }
+      100% { transform: scaleX(1.03) scaleY(0.98) translateX(-0.3px); opacity: 0.97; }
+    }
+
+    .wick { width: 1.5px; height: 7px; background: var(--text3); }
+
+    .candle-body {
+      width: 12px;
+      height: 36px;
+      background: var(--cream2);
+      border: 0.5px solid var(--border2);
+      border-radius: 2px;
+    }
+
+    /* foto principal */
+    .photo-main {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 0.5px solid var(--border2);
+      margin: 0 auto 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--cream2);
+    }
+
+    .photo-main img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .photo-placeholder-icon {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      color: var(--text3);
+    }
+
+    .photo-placeholder-icon svg { width: 36px; height: 36px; }
+    .photo-placeholder-icon span { font-size: 10px; letter-spacing: 0.08em; }
+
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(36px, 8vw, 58px);
+      font-weight: 300;
+      letter-spacing: 0.04em;
+      color: var(--text);
+      margin-bottom: 0.6rem;
+    }
+
+    .dates {
+      font-size: 12px;
+      font-weight: 300;
+      letter-spacing: 0.22em;
+      color: var(--text3);
+      text-transform: uppercase;
+      margin-bottom: 0.4rem;
+    }
+
+    .dates .sep { margin: 0 14px; color: var(--gold); }
+
+    .age {
+      font-size: 11px;
+      color: var(--text3);
+      letter-spacing: 0.1em;
+      margin-bottom: 2rem;
+    }
+
+    .scroll-hint {
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      color: var(--text3);
+      text-transform: uppercase;
+      animation: pulse 2.5s ease-in-out infinite;
+    }
+
+    @keyframes pulse { 0%,100% { opacity: 0.4; } 50% { opacity: 1; } }
+
+    /* ── SECTIONS ── */
+    section {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 5rem 2rem;
+      border-bottom: 0.5px solid var(--border);
+    }
+
+    .label {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.5rem;
+    }
+
+    /* ── BIO ── */
+    .bio-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(20px, 3vw, 24px);
+      font-weight: 300;
+      line-height: 1.8;
+      color: var(--text);
+    }
+
+    .bio-text em {
+      font-style: italic;
+      color: var(--text2);
+    }
+
+    .gold-line {
+      width: 40px;
+      height: 0.5px;
+      background: var(--gold);
+      margin: 2rem 0;
+    }
+
+    /* ── GALLERY ── */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+
+    @media (max-width: 500px) {
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    .gallery-slot {
+      aspect-ratio: 1;
+      background: var(--cream2);
+      border: 0.5px dashed var(--border2);
+      border-radius: 4px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .gallery-slot img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .gallery-slot .slot-empty {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+      color: var(--text3);
+    }
+
+    .gallery-slot .slot-empty svg { width: 24px; height: 24px; }
+    .gallery-slot .slot-empty span { font-size: 10px; letter-spacing: 0.06em; }
+
+    .gallery-note {
+      margin-top: 1rem;
+      font-size: 11px;
+      color: var(--text3);
+      letter-spacing: 0.04em;
+      font-style: italic;
+    }
+
+    /* ── MESSAGES ── */
+    .msgs-list { display: flex; flex-direction: column; gap: 1px; }
+
+    .msg-card {
+      background: var(--cream2);
+      border: 0.5px solid var(--border);
+      border-radius: 6px;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 10px;
+      animation: fadeIn 0.35s ease;
+    }
+
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; } }
+
+    .msg-author {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text);
+      margin-bottom: 2px;
+    }
+
+    .msg-city {
+      font-size: 10px;
+      color: var(--text3);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .msg-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 19px;
+      font-weight: 300;
+      line-height: 1.65;
+      color: var(--text2);
+    }
+
+    .add-btn {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      width: 100%;
+      padding: 0.85rem 1.5rem;
+      border: 0.5px dashed var(--border2);
+      border-radius: 6px;
+      background: transparent;
+      color: var(--text2);
+      font-size: 13px;
+      font-family: 'Jost', sans-serif;
+      font-weight: 300;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: background 0.2s;
+      letter-spacing: 0.04em;
+    }
+
+    .add-btn:hover { background: var(--cream2); }
+
+    .msg-form {
+      display: none;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 10px;
+      padding: 1.25rem 1.5rem;
+      background: var(--cream2);
+      border: 0.5px solid var(--border);
+      border-radius: 6px;
+    }
+
+    .msg-form.open { display: flex; }
+
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+
+    @media (max-width: 480px) { .form-row { grid-template-columns: 1fr; } }
+
+    .msg-form input,
+    .msg-form textarea {
+      width: 100%;
+      padding: 10px 14px;
+      background: var(--cream);
+      border: 0.5px solid var(--border2);
+      border-radius: 4px;
+      color: var(--text);
+      font-family: 'Jost', sans-serif;
+      font-size: 13px;
+      font-weight: 300;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .msg-form input:focus,
+    .msg-form textarea:focus { border-color: var(--gold); }
+
+    .msg-form textarea { min-height: 90px; resize: vertical; }
+
+    .submit-btn {
+      align-self: flex-end;
+      padding: 9px 22px;
+      border: 0.5px solid var(--border2);
+      border-radius: 4px;
+      background: transparent;
+      color: var(--text);
+      font-size: 12px;
+      font-family: 'Jost', sans-serif;
+      font-weight: 400;
+      letter-spacing: 0.06em;
+      cursor: pointer;
+      transition: background 0.2s, border-color 0.2s;
+    }
+
+    .submit-btn:hover { background: var(--cream); border-color: var(--gold); }
+
+    /* ── FOOTER ── */
+    footer {
+      text-align: center;
+      padding: 4rem 2rem 5rem;
+    }
+
+    .footer-divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 2rem;
+    }
+
+    .footer-divider::before,
+    .footer-divider::after {
+      content: '';
+      width: 60px;
+      height: 0.5px;
+      background: var(--border2);
+    }
+
+    .footer-divider span {
+      font-size: 16px;
+      color: var(--gold);
+    }
+
+    .footer-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      font-weight: 300;
+      font-style: italic;
+      color: var(--text2);
+      margin-bottom: 0.4rem;
+    }
+
+    .footer-dates {
+      font-size: 11px;
+      color: var(--text3);
+      letter-spacing: 0.14em;
+      margin-bottom: 2rem;
+    }
+
+    .share-row {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .share-btn {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      padding: 9px 18px;
+      border: 0.5px solid var(--border2);
+      border-radius: 4px;
+      background: transparent;
+      font-size: 12px;
+      font-family: 'Jost', sans-serif;
+      font-weight: 300;
+      color: var(--text2);
+      cursor: pointer;
+      letter-spacing: 0.04em;
+      transition: background 0.2s, color 0.2s;
+      text-decoration: none;
+    }
+
+    .share-btn:hover { background: var(--cream2); color: var(--text); }
+
+    .share-btn svg { width: 15px; height: 15px; flex-shrink: 0; }
+
+    .copied { color: var(--gold) !important; border-color: var(--gold) !important; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#inicio">Início</a>
+    <a href="#historia">Quem foi</a>
+    <a href="#galeria">Fotos</a>
+    <a href="#homenagens">Homenagens</a>
+  </nav>
+
+  <!-- HERO -->
+  <div id="inicio">
+    <div class="candles">
+      <div class="candle"><div class="flame"></div><div class="wick"></div><div class="candle-body"></div></div>
+      <div class="candle"><div class="flame"></div><div class="wick"></div><div class="candle-body"></div></div>
+      <div class="candle"><div class="flame"></div><div class="wick"></div><div class="candle-body"></div></div>
+    </div>
+
+    <!-- FOTO PRINCIPAL -->
+    <!-- Para adicionar foto: substitua o conteúdo da div.photo-main por:
+         <img src="URL_DA_FOTO" alt="Davi de Lima Araujo" />       -->
+    <div class="photo-main">
+      <div class="photo-placeholder-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+        </svg>
+        <span>Adicionar foto</span>
+      </div>
+    </div>
+
+    <h1>Davi de Lima Araujo</h1>
+    <p class="dates">28 abr 2002 <span class="sep">—</span> 23 mai 2026</p>
+    <p class="age">23 anos</p>
+    <p class="scroll-hint">↓ homenagem</p>
+  </div>
+
+  <!-- HISTÓRIA -->
+  <section id="historia">
+    <p class="label">Quem foi Davi</p>
+    <p class="bio-text">
+      Davi era um jovem que <em>iluminou cada espaço que habitou.</em> Cheio de sonhos e com um coração generoso, dedicava-se com afinco ao trabalho e à vida — sempre em busca de crescer, sem nunca esquecer de aproveitar cada momento.
+    </p>
+    <div class="gold-line"></div>
+    <p class="bio-text">
+      Quem o conheceu guarda a memória de alguém comprometido, alegre e profundamente humano. Era mais que amigo para muitos — era irmão. Sua passagem foi breve, mas <em>sua luz permanece em cada pessoa que tocou.</em>
+    </p>
+  </section>
+
+  <!-- GALERIA -->
+  <section id="galeria">
+    <p class="label">Galeria de momentos</p>
+    <div class="gallery-grid">
+
+      <!-- Para adicionar fotos, substitua o conteúdo de cada .gallery-slot por:
+           <img src="URL_DA_FOTO" alt="Davi" />                     -->
+
+      <div class="gallery-slot">
+        <div class="slot-empty">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/>
+          </svg>
+          <span>Foto 1</span>
+        </div>
+      </div>
+
+      <div class="gallery-slot">
+        <div class="slot-empty">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/>
+          </svg>
+          <span>Foto 2</span>
+        </div>
+      </div>
+
+      <div class="gallery-slot">
+        <div class="slot-empty">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/>
+          </svg>
+          <span>Foto 3</span>
+        </div>
+      </div>
+
+      <div class="gallery-slot">
+        <div class="slot-empty">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/>
+          </svg>
+          <span>Foto 4</span>
+        </div>
+      </div>
+
+      <div class="gallery-slot">
+        <div class="slot-empty">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/>
+          </svg>
+          <span>Foto 5</span>
+        </div>
+      </div>
+
+      <div class="gallery-slot">
+        <div class="slot-empty">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/>
+          </svg>
+          <span>Foto 6</span>
+        </div>
+      </div>
+
+    </div>
+    <p class="gallery-note">Para adicionar fotos: abra o arquivo no editor e substitua cada &lt;div class="slot-empty"&gt; por &lt;img src="sua-foto.jpg" alt="Davi" /&gt;</p>
+  </section>
+
+  <!-- HOMENAGENS -->
+  <section id="homenagens">
+    <p class="label">Homenagens</p>
+    <div class="msgs-list" id="msgsList">
+
+      <div class="msg-card">
+        <p class="msg-author">Lucas Gois</p>
+        <p class="msg-city">São Carlos</p>
+        <p class="msg-text">Você foi luz, meu amigo. Obrigado pelos ensinamentos, pelo companheirismo e pela amizade. Os dias com você foram os melhores. Te amo para sempre.</p>
+      </div>
+
+      <div class="msg-card">
+        <p class="msg-author">Thiago Andrade</p>
+        <p class="msg-city">São Carlos</p>
+        <p class="msg-text">Você foi luz nos meus dias e na vida de todos que você conheceu, meu irmão. Te amaremos para sempre ❤️</p>
+      </div>
+
+      <div class="msg-card">
+        <p class="msg-author">Lucas Ferreira</p>
+        <p class="msg-city">Ribeirão Bonito</p>
+        <p class="msg-text">Um menino cheio de sonhos, com um coração puro e uma ambição do tamanho do mundo, que dava gosto de ver. Vá em paz, meu amigo — nunca deixaremos você ser esquecido.</p>
+      </div>
+
+      <div class="msg-card">
+        <p class="msg-author">Cristhiane Gois</p>
+        <p class="msg-city">São Carlos</p>
+        <p class="msg-text">Que bom foi ter você em nossa família. Ficamos aqui na certeza de que cumpriu sua missão. Que Deus conforte o coração de seus familiares.</p>
+      </div>
+
+      <div class="msg-card">
+        <p class="msg-author">Vanessa</p>
+        <p class="msg-city">São Carlos</p>
+        <p class="msg-text">Permita-se sentir cada emoção, cada lágrima, cada lembrança. Estou aqui para você, a qualquer hora.</p>
+      </div>
+
+      <div class="msg-card">
+        <p class="msg-author">Guilherme Martins</p>
+        <p class="msg-city">Brotas</p>
+        <p class="msg-text">Descansa em paz, meu irmão. Saudades de você. Em breve nos encontramos novamente ❤️</p>
+      </div>
+
+    </div>
+
+    <button class="add-btn" onclick="toggleForm()" id="addBtn">
+      <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+        <path d="M12 5v14M5 12h14"/>
+      </svg>
+      Deixar uma homenagem
+    </button>
+
+    <div class="msg-form" id="msgForm">
+      <div class="form-row">
+        <input type="text" id="fName" placeholder="Seu nome" maxlength="80" />
+        <input type="text" id="fCity" placeholder="Cidade" maxlength="60" />
+      </div>
+      <textarea id="fText" placeholder="Sua mensagem de homenagem..." maxlength="600"></textarea>
+      <button class="submit-btn" onclick="addMsg()">Publicar homenagem</button>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-divider"><span>✦</span></div>
+    <p class="footer-name">Em memória de Davi de Lima Araujo</p>
+    <p class="footer-dates">28 · 04 · 2002 &nbsp;—&nbsp; 23 · 05 · 2026</p>
+    <div class="share-row">
+      <button class="share-btn" onclick="copyLink(this)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/>
+        </svg>
+        <span>Copiar link</span>
+      </button>
+      <a class="share-btn" href="https://wa.me/?text=Uma%20homenagem%20para%20Davi%20de%20Lima%20Araujo%20%E2%84%A2%20https%3A%2F%2Fsistemamemoriam.com%2Fc%2F98846" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/>
+        </svg>
+        <span>Compartilhar no WhatsApp</span>
+      </a>
+    </div>
+  </footer>
+
+  <script>
+    function toggleForm() {
+      const form = document.getElementById('msgForm');
+      form.classList.toggle('open');
+      if (form.classList.contains('open')) {
+        document.getElementById('fName').focus();
+        document.getElementById('addBtn').style.opacity = '0.5';
+      } else {
+        document.getElementById('addBtn').style.opacity = '1';
+      }
+    }
+
+    function addMsg() {
+      const name = document.getElementById('fName').value.trim();
+      const city = document.getElementById('fCity').value.trim();
+      const text = document.getElementById('fText').value.trim();
+
+      if (!name) { document.getElementById('fName').focus(); return; }
+      if (!text) { document.getElementById('fText').focus(); return; }
+
+      const card = document.createElement('div');
+      card.className = 'msg-card';
+      card.innerHTML = `
+        <p class="msg-author">${esc(name)}</p>
+        ${city ? `<p class="msg-city">${esc(city)}</p>` : ''}
+        <p class="msg-text">${esc(text)}</p>
+      `;
+
+      document.getElementById('msgsList').appendChild(card);
+      card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+      document.getElementById('fName').value = '';
+      document.getElementById('fCity').value = '';
+      document.getElementById('fText').value = '';
+      document.getElementById('msgForm').classList.remove('open');
+      document.getElementById('addBtn').style.opacity = '1';
+    }
+
+    function esc(str) {
+      return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+    }
+
+    function copyLink(btn) {
+      const url = window.location.href !== 'about:blank' ? window.location.href : 'https://sistemamemoriam.com/c/98846';
+      navigator.clipboard.writeText(url).then(() => {
+        const span = btn.querySelector('span');
+        const orig = span.textContent;
+        btn.classList.add('copied');
+        span.textContent = 'Link copiado!';
+        setTimeout(() => { btn.classList.remove('copied'); span.textContent = orig; }, 2200);
+      }).catch(() => {
+        prompt('Copie o link:', url);
+      });
+    }
+  </script>
+
+</body>
+</html>
