@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23000000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='5' r='1'/%3E%3Cpath d='m9 20 3-6 3 6'/%3E%3Cpath d='m6 8 6 2 6-2'/%3E%3Cpath d='M12 10v4'/%3E%3C/svg%3E">
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23000000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='5' r='1'/%3E%3Cpath d='m9 20 3-6 3 6'/%3E%3Cpath d='m6 8 6 2 6-2'/%3E%3Cpath d='M12 10v4'/%3E%3C/svg%3E">
     <title>Meu site</title>
     <style>
         * {
@@ -103,16 +104,18 @@
         }
 
         .caixa {
-            height: 500px;
+            height: auto;
             width: 100%;
             max-width: 1000px;
             background-color: #4b5563;
             border-radius: 10px;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             color: white;
             margin: 20px auto;
+            padding: 20px 40px;
         }
 
         .caixaColorida {
@@ -152,24 +155,6 @@
             text-align: center;
             padding: 15px 0;
             z-index: 10;
-        }
-
-        .fotoEu {
-            background-image: url('eu.jpg');
-            background-position: center;
-            border-radius: 50%;
-            background-repeat: no-repeat;
-            width: 140px;
-            height: 140px;
-        }
-
-        .texto-arco-iris {
-            font-size: 48px;
-            font-weight: bold;
-            background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
         }
     </style>
 </head>
@@ -231,25 +216,68 @@
     </div>
     <br>
     <main>
-        <header>
-            <div class="fotoEu"></div>
-            <h3>Nome:</h3>
-            <p>Henrique Castanheira de Oliveira</p>
-            <h3>Idade:</h3>
-            <p id="idade"></p>
-            <p class="texto-arco-iris">Desenvolvedor Web</p>
-        </header>
         <center>
-            <h1>Biografia</h1>
+            <h1>Vida Pessoal</h1>
             <div class="caixa">
-                <p>Atualmente 2026 sou estudante de Desenvolvimeto de Sistemas na ETEC Tenete Aviador Gustavo Klug em
-                    Pirassunuga. Tenho o sonho de ser aprovado no concurso de sargento das armas (ESA), tenho 17 anos
-                    sempre buscando aumentar meus conhecimentos e cada vez mais me apaixonando por tecnologia. </p>
+                <p>teste</p>
             </div>
 
-            <h1>Resumo sobre mim</h1>
+            <h1>Cursos e Formações</h1>
             <div class="caixa">
-                <p>Atualmente sou estudante no ensino medio e concurseiro</p>
+                <p>teste</p>
+            </div>
+
+            <h1>Sabedoria</h1>
+            <div class="caixa">
+                <p>Conecimentos em:</p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" class="lucide lucide-code-xml-icon lucide-code-xml">
+                    <path d="m18 16 4-4-4-4" />
+                    <path d="m6 8-4 4 4 4" />
+                    <path d="m14.5 4-5 16" />
+                </svg><br>
+                <ul style="list-style: none">
+                    <h3>Back End</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="lucide lucide-arrow-big-down-icon lucide-arrow-big-down">
+                        <path
+                            d="M9 5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v6a1 1 0 0 0 1 1h3.293a.707.707 0 0 1 .5 1.207l-7.086 7.086a1 1 0 0 1-1.414 0l-7.086-7.086a.707.707 0 0 1 .5-1.207H8a1 1 0 0 0 1-1z" />
+                    </svg>
+                    <li>PHP</li><br>
+                    <li>JAVA</li><br>
+                    <li>MySQL</li><br>
+                    <li>Python</li><br>
+
+                    <h3>Front End</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="lucide lucide-arrow-big-down-icon lucide-arrow-big-down">
+                        <path
+                            d="M9 5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v6a1 1 0 0 0 1 1h3.293a.707.707 0 0 1 .5 1.207l-7.086 7.086a1 1 0 0 1-1.414 0l-7.086-7.086a.707.707 0 0 1 .5-1.207H8a1 1 0 0 0 1-1z" />
+                    </svg>
+                    <li>CSS</li><br>
+                    <li>HTML</li><br>
+
+                    <h3>Escritorio/Edição</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="lucide lucide-arrow-big-down-icon lucide-arrow-big-down">
+                        <path
+                            d="M9 5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v6a1 1 0 0 0 1 1h3.293a.707.707 0 0 1 .5 1.207l-7.086 7.086a1 1 0 0 1-1.414 0l-7.086-7.086a.707.707 0 0 1 .5-1.207H8a1 1 0 0 0 1-1z" />
+                    </svg>
+                    <li>CoreDrawl</li><br>
+                    <li>Word</li><br>
+                    <li>Power Point</li><br>
+                    <li></li><br>
+
+                    <h3>Outras Areas</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="lucide lucide-arrow-big-down-icon lucide-arrow-big-down">
+                        <path
+                            d="M9 5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v6a1 1 0 0 0 1 1h3.293a.707.707 0 0 1 .5 1.207l-7.086 7.086a1 1 0 0 1-1.414 0l-7.086-7.086a.707.707 0 0 1 .5-1.207H8a1 1 0 0 0 1-1z" />
+                    </svg>
+                    <li>Arduino</li><br>
+                    <li>ESP32</li><br>
+                    <li></li><br>
+                </ul>
             </div>
             <div class="caixaColorida"></div>
         </center>
@@ -272,73 +300,6 @@
                 menuIcon.setAttribute('d', "M4 6h16M4 12h16M4 18h16");
             }
         });
-
-        const nascimento = new Date(2009, 2, 19, 0, 0, 0);
-
-        function atualizarIdade() {
-
-            const agora = new Date();
-
-            let anos = agora.getFullYear() - nascimento.getFullYear();
-            let meses = agora.getMonth() - nascimento.getMonth();
-            let dias = agora.getDate() - nascimento.getDate();
-
-            let horas = agora.getHours() - nascimento.getHours();
-            let minutos = agora.getMinutes() - nascimento.getMinutes();
-            let segundos = agora.getSeconds() - nascimento.getSeconds();
-
-            // Ajuste segundos
-            if (segundos < 0) {
-                segundos += 60;
-                minutos--;
-            }
-
-            // Ajuste minutos
-            if (minutos < 0) {
-                minutos += 60;
-                horas--;
-            }
-
-            // Ajuste horas
-            if (horas < 0) {
-                horas += 24;
-                dias--;
-            }
-
-            // Ajuste dias
-            if (dias < 0) {
-
-                meses--;
-
-                const ultimoMes = new Date(
-                    agora.getFullYear(),
-                    agora.getMonth(),
-                    0
-                ).getDate();
-
-                dias += ultimoMes;
-            }
-
-            // Ajuste meses
-            if (meses < 0) {
-                meses += 12;
-                anos--;
-            }
-
-            document.getElementById("idade").innerHTML =
-                `${anos} anos, 
-         ${meses} meses, 
-         ${dias} dias, 
-         ${horas} horas, 
-         ${minutos} minutos e 
-         ${segundos} segundos`;
-        }
-
-        // Atualiza imediatamente
-        atualizarIdade();
-
-        // Atualiza a cada segundo
-        setInterval(atualizarIdade, 1000);
     </script>
 </body>
 

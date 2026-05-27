@@ -1,0 +1,35 @@
+.barraLateral{
+    background-color: blue;
+    font-family:Arial, Helvetica, sans-serif;
+    width: 80px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px;
+    padding: 10px;
+    
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*BOTAO*/
+.button {
+    background-color: #04AA6D;
+    padding: 16px;
+    margin: 0;
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+
+} /* Green */
+.button {
+    transition-duration: 0.4s;
+  }
+  
+.button:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
+  }
